@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 
 import Header from '../components/header'
-import Navigation from '../components/Navigation'
+import Navigation from '../components/navigation'
 import SocialPanel from '../components/SocialPanel'
 
 import './index.css'

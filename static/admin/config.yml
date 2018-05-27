@@ -15,11 +15,6 @@ collections:
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: excerpt, label: excerpt, widget: text }
-      - label: "Tags"
-        name: "tags"
-        widget: "list"
-        field:
-          - { name: php, label: php }
       - { name: body, label: Body, widget: markdown }
   - name: projects
     label: Projects

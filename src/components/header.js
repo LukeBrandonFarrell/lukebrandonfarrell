@@ -19,12 +19,18 @@ const Wrapper = styled.div`
 
 const Title = styled.div`
   font-size: 4.25em;
+  font-weight: bolder;
   color: #fff;
   text-transform: uppercase;
   line-height: 1;
 
   @media (max-width: 960px) {
     font-size: 3em;
+  }
+
+  @media (max-width: 750px) {
+    font-size: 2.2em;
+    text-align: center;
   }
 `;
 
@@ -39,10 +45,18 @@ const Tagline = styled.div`
     font-size: 0.8em;
     line-height: 30px;
   }
+
+  @media (max-width: 750px) {
+    display: none;
+  }
 `;
 
-const Header = ({ metadata }) => {
+const Header = ({ metadata, folded }) => {
   const { title, tagline } = metadata;
+
+  if(folded){
+    return null;
+  }
 
   return (
     <Container>

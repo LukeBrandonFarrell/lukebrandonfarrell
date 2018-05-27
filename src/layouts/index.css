@@ -199,7 +199,7 @@ html {
 body {
   color: hsla(0, 0%, 0%, 0.8);
   font-family: 'Source Sans Pro', sans-serif;
-  
+
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -622,4 +622,22 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+.navigation-enter {
+  opacity: 0.01;
+}
+
+.navigation-enter.navigation-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.navigation-leave {
+  opacity: 1;
+}
+
+.navigation-leave.navigation-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
 }

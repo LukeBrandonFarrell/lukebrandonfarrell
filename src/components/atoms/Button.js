@@ -11,10 +11,6 @@ const Button = styled(Link)`
   text-decoration: none;
   color: white;
 
-  @media (max-width: 750px) {
-    color: #2a2a2a;
-  }
-
   :hover {
     color: #fff;
     background-color: #ff2828;
@@ -22,6 +18,8 @@ const Button = styled(Link)`
 
   @media (max-width: 750px) {
     flex-grow: 1;
+    color: #2a2a2a;
+    background-color: #dfdfdf;
     text-align: center;
   }
 `;

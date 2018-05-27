@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import styled from 'styled-components'
 
-import { Title } from '../components/atoms'
+import { BlogTitle } from '../components/atoms'
 
 export default function Template({
   data
@@ -12,7 +12,7 @@ export default function Template({
     <div className="blog-post-container">
       <Helmet title={`${post.frontmatter.title}`} />
       <div className="blog-post">
-        <Title>{post.frontmatter.title}</Title>
+        <BlogTitle>{post.frontmatter.title}</BlogTitle>
         <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </div>

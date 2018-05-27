@@ -1,54 +1,70 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { CSSTransitionGroup } from 'react-transition-group';
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 
 import Header from '../components/header'
 import Navigation from '../components/navigation'
 import SocialPanel from '../components/SocialPanel'
+import Footer from '../components/Footer'
+import Buttons from '../components/Buttons'
 
 import './index.css'
 
-const Footer = styled.div`
-  display: none;
+class Layout extends React.Component {
+  state = { navigationFolded: false, };
 
-  @media (max-width: 750px) {
-    display: block;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    border-top: 1px solid #dbdbdb;
-    background-color: #FFF;
-  }
-`;
+  componentDidMount() {
+      window.addEventListener('scroll', this.handleScroll.bind(this));
+  };
 
-const Layout = ({ children, data }) => {
-  return (
-    <div>
-      <Helmet
-        title={data.site.siteMetadata.title}
-        meta={[
-          { name: 'description', content: 'Sample' },
-          { name: 'keywords', content: 'sample, something' },
-        ]}
-      />
-      <Header metadata={data.site.siteMetadata} />
-      <Navigation pages={data.site.siteMetadata.pages} />
-      <div
-        style={{
-          margin: '0 auto',
-          maxWidth: 960,
-          padding: '0px 1.0875rem 1.45rem',
-          paddingTop: 0,
-        }}
-      >
-        {children()}
+  componentWillUnmount() {
+      window.removeEventListener('scroll', this.handleScroll.bind(this));
+  };
+
+  handleScroll(event) {
+    if(window.scrollY > 0){
+      this.setState({ navigationFolded: true });
+    }
+  };
+
+  render(){
+    const { children, data } = this.props;
+
+    return (
+      <div>
+        <Helmet
+          title={data.site.siteMetadata.title}
+          meta={[
+            { name: 'description', content: 'Sample' },
+            { name: 'keywords', content: 'sample, something' },
+          ]}
+        />
+
+      <CSSTransitionGroup
+            transitionName="navigation"
+            transitionEnterTimeout={500}
+            transitionLeaveTimeout={300}>
+          <Header key='header' metadata={data.site.siteMetadata} folded={this.state.navigationFolded} />
+          <Navigation key='navigation' pages={data.site.siteMetadata.pages} folded={this.state.navigationFolded} />
+      </CSSTransitionGroup>
+        <div
+          style={{
+            margin: '0 auto',
+            maxWidth: 960,
+            padding: '0px 1.0875rem 1.45rem',
+            paddingTop: 0,
+          }}
+        >
+          {children()}
+        </div>
+        <Footer>
+          <Buttons pages={data.site.siteMetadata.pages} />
+        </Footer>
       </div>
-      <Footer>
-        <SocialPanel />
-      </Footer>
-    </div>
-  );
+    );
+  }
 };
 
 Layout.propTypes = {

@@ -4,13 +4,17 @@ import S from 'string';
 
 import { Button } from './atoms'
 import SocialPanel from './SocialPanel'
+import Buttons from './Buttons'
 
 import '../vendor/css/fontawesome-all.min.css'
 
 const NavigationBar = styled.div`
   margin-bottom: 1.45rem;
-  padding: 20px 0 0;
   background-color: #020203;
+
+  @media (max-width: 750px) {
+    padding: 10px 0 0;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -19,39 +23,23 @@ const Wrapper = styled.div`
   margin: 0px auto;
 `;
 
-const Buttons = styled.div`
-   flex-grow: 1;
-
-   @media (max-width: 750px) {
-     display: flex;
-   }
-`;
-
 const Mobile = styled.div`
+  flex-grow: 1;
+
   @media (max-width: 750px) {
     display: none;
   }
 `;
 
-const Navigation = ({ pages }) => {
-  const links = Object.entries(pages).map(function(element, i) {
-    return (
-      <Button key={i} exact to={element[1]} style={{ color: 'white' }} activeStyle={{ backgroundColor: 'white', color: '#020203' }} >
-        { S(element[0]).capitalize().s }
-      </Button>
-    );
-  });
-
+const Navigation = ({ pages, folded }) => {
   return (
-    <NavigationBar>
+    <NavigationBar style={{ padding: folded ? '0px' : '20px 0px 0px' }}>
       <Wrapper>
-        <Buttons>
-          { links }
-        </Buttons>
-
         <Mobile>
-          <SocialPanel />
+          <Buttons pages={pages} />
         </Mobile>
+
+        <SocialPanel />
       </Wrapper>
     </NavigationBar>
   )

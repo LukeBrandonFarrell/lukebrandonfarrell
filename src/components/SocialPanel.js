@@ -4,11 +4,9 @@ import styled from 'styled-components'
 import { Icon } from './atoms'
 
 const Social = styled.div`
-  position: relative;
-
   @media (max-width: 750px) {
     display: flex;
-    color: #464646;
+    width: 100%;
   }
 `;
 
@@ -21,10 +19,6 @@ const Button = styled.a`
   line-height: 50px;
   text-decoration: none;
   color: white;
-
-  @media (max-width: 750px) {
-    color: #2a2a2a;
-  }
 
   :hover {
     color: #fff;

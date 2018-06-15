@@ -1,9 +1,9 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import styled from 'styled-components'
 
 import PostList from '../components/post-list'
 
-export default function Index({
+export default function Projects({
   data
 }) {
   const { edges: posts } = data.allMarkdownRemark;
@@ -14,10 +14,10 @@ export default function Index({
 }
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query ExperienceQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { type: { eq: "article" } } }
+      filter: { frontmatter: { type: { eq: "experience" } } }
     ) {
       edges {
         node {

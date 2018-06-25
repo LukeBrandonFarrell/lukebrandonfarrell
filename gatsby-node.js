@@ -20,7 +20,13 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             path
             title
             excerpt
-            feature
+            feature  {
+              childImageSharp {
+                sizes (maxWidth: 950) {
+                  src
+                }
+              }
+            }
             author
           }
         }

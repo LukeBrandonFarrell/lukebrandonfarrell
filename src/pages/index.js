@@ -30,7 +30,7 @@ export const pageQuery = graphql`
             excerpt
             feature  {
               childImageSharp {
-                responsiveSizes (maxWidth: 200) {
+                sizes (maxWidth: 950) {
                   src
                 }
               }

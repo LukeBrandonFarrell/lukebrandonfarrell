@@ -1,12 +1,14 @@
 import React from 'react';
+import GatsbyLink from 'gatsby-link';
 
-import { Button, ButtonActive } from "./style.css.js";
+import styles from "./style.module.scss";
 
 const NavigationButton = ({ label, link }) => {
+  console.log(styles);
   return (
-    <Button exact to={ link } activeStyle={ ButtonActive }>
+    <GatsbyLink exact to={ link } className={ styles.button } activeClassName={ styles.buttonActive }>
       { label }
-    </Button>
+    </GatsbyLink>
   );
 };
 

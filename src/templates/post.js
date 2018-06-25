@@ -1,6 +1,5 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import styled from 'styled-components'
 
 import styles from "./post.module.scss";
 
@@ -9,7 +8,7 @@ export default function Template({ data }) {
 
   return (
     <div className={ styles.postContainer }>
-      <Helmet title={`${post.frontmatter.title}`} />
+      <Helmet title={ post.frontmatter.title } />
       <h2 className={ styles.title }>{ post.frontmatter.title }</h2>
       <div className={ styles.metadata }>
         <p>Written by { post.frontmatter.author }</p>
@@ -29,7 +28,13 @@ export const pageQuery = graphql`
         path
         title
         excerpt
-        feature 
+        feature  {
+          childImageSharp {
+            sizes (maxWidth: 950) {
+              src
+            }
+          }
+        }
         author
       }
     }

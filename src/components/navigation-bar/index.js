@@ -4,7 +4,7 @@ import S from 'string';
 import NavigationButton from '../navigation-button';
 import NavigationTitle from '../navigation-title';
 
-import { Main } from "./style.css.js";
+import styles from "./style.module.scss";
 
 /**
 * @render react
@@ -21,10 +21,10 @@ const NavigationBar = ({ pages }) => {
   });
 
   return (
-    <Main>
+    <div className={ styles.container }>
       <NavigationTitle label='LUKE BRANDON FARRELL' />
       { links }
-    </Main>
+    </div>
   );
 };
 

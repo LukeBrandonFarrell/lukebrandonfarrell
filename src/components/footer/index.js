@@ -1,18 +1,18 @@
 import React from 'react';
 
-import { Main, Copyright, Icons, Icon } from "./style.css.js";
+import styles from "./style.module.scss";
 
 const Footer = () => {
   return (
-    <Main>
-      <hr style={{width: '60%', margin: '20px auto'}} />
-      <Copyright>&copy; { (new Date()).getFullYear() } Luke Brandon Farrell. All rights reserved.</Copyright>
-      <Icons>
-        <Icon className="fab fa-github" href="https://github.com/LukeBrandonFarrell" target="_blank" />
-        <Icon className="fab fa-linkedin" href="https://www.linkedin.com/in/lukebrandonfarrell/" target="_blank" />
-        <Icon className="fab fa-stack-overflow" href="https://stackoverflow.com/story/lukebrandonfarrell" target="_blank" />
-      </Icons>
-    </Main>
+    <div className={ styles.container }>
+      <hr className={ styles.divider } />
+      <p className={ styles.copyright }>&copy; { (new Date()).getFullYear() } Luke Brandon Farrell. All rights reserved.</p>
+      <div className={ styles.icons }>
+        <a className={[ styles.icon, 'fab fa-github' ].join(' ')} href="https://github.com/LukeBrandonFarrell" target="_blank" />
+        <a className={[ styles.icon, 'fab fa-linkedin' ].join(' ')} href="https://www.linkedin.com/in/lukebrandonfarrell/" target="_blank" />
+        <a className={[ styles.icon, 'fab fa-stack-overflow' ].join(' ')} href="https://stackoverflow.com/story/lukebrandonfarrell" target="_blank" />
+      </div>
+    </div>
   );
 };
 

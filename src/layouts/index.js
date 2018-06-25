@@ -1,13 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import styled from 'styled-components'
 
 import NavigationBar from '../components/navigation-bar'
 import Footer from '../components/footer'
 
 import '../vendor/css/fontawesome-all.min.css'
 import './index.css'
+
+require("prismjs/themes/prism-tomorrow.css");
 
 class Layout extends React.Component {
   render(){

@@ -1,12 +1,12 @@
-import styled from "styled-components";
-
-const Title = styled.h1`
+.title {
   display: inline-block;
   margin: 0px 20px;
   box-sizing: border-box;
   color: white;
   font-size: 24px;
   font-weight: bold;
-`;
 
-export { Title };
+  @media (max-width: 750px) {
+    display: none;
+  }
+}

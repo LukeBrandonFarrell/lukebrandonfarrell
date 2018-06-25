@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Title } from "./style.css.js";
+import styles from './style.module.scss';
 
 const NavigationTitle = ({ label }) => {
   return (
-    <Title>{ label }</Title>
+    <p className={ styles.title }>{ label }</p>
   );
 };
 

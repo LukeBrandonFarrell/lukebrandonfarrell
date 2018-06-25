@@ -1,13 +1,12 @@
 import React from 'react';
 import Post from '../post'
 
-import { List } from "./style.css.js";
+import styles from './style.module.scss';
 
 const PostList = ({ posts }) => {
   return (
-    <List>
+    <div className={ styles.list }>
       { posts.map(({ node: post }) => {
-          console.log(post);
           return (
             <Post
               key={post.id}
@@ -18,7 +17,7 @@ const PostList = ({ posts }) => {
               date={post.frontmatter.date} />
           );
        })}
-    </List>
+    </div>
   );
 };
 

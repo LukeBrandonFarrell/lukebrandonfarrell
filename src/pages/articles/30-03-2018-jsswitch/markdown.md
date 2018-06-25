@@ -1,20 +1,22 @@
 ---
 path: /javascript-switch-alt
-date: '2017-07-12T17:12:33.962Z'
+date: '2018-06-25'
 title: A replacement for switch statements in Javascript
 excerpt: >-
   Switch statements are pretty ugly... here is an alternative to provide
   switch-like functionality using object literals.
-feature: "./10481883_505791199551854_7302817800016051775_n.jpg"
+feature: "./feature.jpg"
 author: Luke Brandon Farrell
 tags:
   - z
-type: project
+type: article  
 ---
+
+This is the one!
 
 In Javascript, one can replace a switch statement using object literal lookups like so:
 
-```
+```javascript
   return {
   0 : () => setDefaultAddress(),
   1 : () => editAddress(),
@@ -24,7 +26,7 @@ In Javascript, one can replace a switch statement using object literal lookups l
 Instead of:
 
 
-```
+```javascript
 switch (index) {
   case 1:
     setDefaultAddress()  
@@ -41,3 +43,6 @@ switch (index) {
 ```
 
 Much more readable, don’t you think?
+
+
+<small>Feature Photo by [Hannah Troupe](https://unsplash.com/@htroupe) on Unsplash.</small>

@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 
 import PostList from '../components/post-list'
 
@@ -28,6 +27,13 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             path
             excerpt
+            feature  {
+              childImageSharp {
+                sizes (maxWidth: 950) {
+                  src
+                }
+              }
+            }
           }
         }
       }

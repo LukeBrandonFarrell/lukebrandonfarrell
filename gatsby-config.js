@@ -11,17 +11,15 @@ module.exports = {
   plugins: [
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
-    `gatsby-plugin-styled-components`,
-    `gatsby-plugin-netlify-cms`,
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
     {
      resolve: `gatsby-source-filesystem`,
      options: {
        path: `${__dirname}/src/pages`,
        name: 'pages',
      },
-   },
-   {
+    },
+    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
@@ -29,10 +27,8 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
               maxWidth: 950,
+              backgroundColor: 'transparent',
             },
           },
           {
@@ -48,5 +44,19 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: "./src/favicon.png",
+        injectHTML: true,
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: true,
+          favicons: true,
+          firefox: true,
+        }
+      }
+    }
   ],
 }

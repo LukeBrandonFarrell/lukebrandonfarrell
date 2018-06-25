@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Helmet from 'react-helmet'
 
 import PostList from '../components/post-list'
 
@@ -9,7 +10,10 @@ export default function Index({
   const { edges: posts } = data.allMarkdownRemark;
 
   return (
-    <PostList posts={posts} />
+    <div>
+      <Helmet title='Luke Brandon Farrell : Posts' />
+      <PostList posts={posts} />
+    </div>
   );
 }
 

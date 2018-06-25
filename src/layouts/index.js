@@ -17,10 +17,9 @@ class Layout extends React.Component {
     return (
       <div>
         <Helmet
-          title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            { name: 'description', content: 'Building complex systems through calculated and creative problem solving.' },
+            { name: 'keywords', content: 'luke brandon farrell, complex, creative, full-stack, programmer, problems, javascript' },
           ]}
         />
 

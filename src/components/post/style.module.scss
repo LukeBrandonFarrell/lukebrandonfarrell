@@ -5,7 +5,7 @@
   vertical-align: top;
   text-decoration: none;
 
-  :hover {
+  &:hover {
     * { color: #9E170B; }
   }
 
@@ -34,7 +34,7 @@
   transition: all 0.3s;
   transition-timing-function: cubic-bezier(.26,.6,.51,.55);
 
-  :hover {
+  &:hover {
     -moz-transform: scale(1.2);
     -webkit-transform: scale(1.2);
     transform: scale(1.2);

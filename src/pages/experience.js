@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 
 import PostList from '../components/post-list'
 
@@ -8,7 +9,10 @@ export default function Projects({
   const { edges: posts } = data.allMarkdownRemark;
 
   return (
-    <PostList posts={posts} />
+    <div>
+      <Helmet title='Luke Brandon Farrell : Experience' />
+      <PostList posts={posts} />
+    </div>
   );
 }
 

@@ -1,5 +1,5 @@
 ---
-path: https://github.com/lukebrandonfarrell/react-native-images-collage
+path: /react-images
 date: '2018-06-25'
 title: React Native Images Collage
 excerpt: >-

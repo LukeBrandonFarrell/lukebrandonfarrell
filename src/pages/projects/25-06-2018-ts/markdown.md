@@ -1,5 +1,5 @@
 ---
-path: https://talentstatus.com/
+path: /talentstatus
 date: '2018-06-25'
 title: Talent Status
 excerpt: >-

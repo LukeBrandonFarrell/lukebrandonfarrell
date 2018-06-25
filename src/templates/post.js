@@ -5,7 +5,7 @@ import styles from "./post.module.scss";
 
 export default function Template({ data }) {
   const post = data.markdownRemark;
-
+  console.log(data);
   return (
     <div className={ styles.postContainer }>
       <Helmet title={ post.frontmatter.title } />

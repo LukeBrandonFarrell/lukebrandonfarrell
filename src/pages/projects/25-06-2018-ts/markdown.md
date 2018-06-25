@@ -1,5 +1,5 @@
 ---
-path: /talentstatus
+path: /talent-status
 date: '2018-06-25'
 title: Talent Status
 excerpt: >-
@@ -9,4 +9,5 @@ author: Luke Brandon Farrell
 tags:
   - z
 type: project
+external: https://talentstatus.com/
 ---

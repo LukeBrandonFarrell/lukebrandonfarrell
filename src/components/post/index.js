@@ -4,7 +4,7 @@ import GatsbyLink from 'gatsby-link'
 
 import styles from './style.module.scss';
 
-const Post = ({ path, title, excerpt, feature, date }) => {
+const Post = ({ path, title, excerpt, feature, date, external }) => {
   const content = (
     <div className={ styles.container }>
       <div className={ styles.imageContainer }>
@@ -16,8 +16,7 @@ const Post = ({ path, title, excerpt, feature, date }) => {
     </div>
   );
 
-
-  if (path.startsWith('/')) {
+  if (!external) {
     return (
       <GatsbyLink exact to={ path }>
         { content }
@@ -26,7 +25,7 @@ const Post = ({ path, title, excerpt, feature, date }) => {
   }
 
   return (
-    <a href={ path } target='_blank'>
+    <a href={ external } target='_blank'>
       { content }
     </a>
   );

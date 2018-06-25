@@ -14,7 +14,8 @@ const PostList = ({ posts }) => {
               title={post.frontmatter.title}
               excerpt={post.frontmatter.excerpt}
               feature={post.frontmatter.feature}
-              date={post.frontmatter.date} />
+              date={post.frontmatter.date}
+              external={post.frontmatter.external} />
           );
        })}
     </div>

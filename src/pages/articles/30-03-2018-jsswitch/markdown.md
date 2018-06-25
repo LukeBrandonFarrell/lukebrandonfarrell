@@ -9,7 +9,8 @@ feature: "./feature.jpg"
 author: Luke Brandon Farrell
 tags:
   - z
-type: article  
+type: article
+external: null  
 ---
 
 This is the one!

@@ -1,5 +1,5 @@
 ---
-path: /react-images
+path: /react-native-images-collage
 date: '2018-06-25'
 title: React Native Images Collage
 excerpt: >-
@@ -9,4 +9,5 @@ author: Luke Brandon Farrell
 tags:
   - z
 type: experience
+external: https://github.com/lukebrandonfarrell/react-native-images-collage  
 ---

@@ -1,0 +1,25 @@
+.postContainer {
+  margin: 30px auto;
+  width: 60%;
+}
+
+.postContent {
+  font-family: "Lucida Grande", sans-serif;
+  font-size: 18px;
+  color: #292929;
+
+  img {
+    width: 100%;
+  }
+}
+
+.title {
+  font-size: 38px;
+  margin-bottom: 8px;
+}
+
+.metadata {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+}

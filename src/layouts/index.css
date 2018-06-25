@@ -623,21 +623,3 @@ pre tt:after {
     font-size: 100%;
   }
 }
-
-.navigation-enter {
-  opacity: 0.01;
-}
-
-.navigation-enter.navigation-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
-}
-
-.navigation-leave {
-  opacity: 1;
-}
-
-.navigation-leave.navigation-leave-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in;
-}

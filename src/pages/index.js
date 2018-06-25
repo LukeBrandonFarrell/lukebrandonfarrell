@@ -28,6 +28,13 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             path
             excerpt
+            feature  {
+              childImageSharp {
+                responsiveSizes (maxWidth: 200) {
+                  src
+                }
+              }
+            }
           }
         }
       }

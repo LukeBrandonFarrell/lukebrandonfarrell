@@ -1,11 +1,13 @@
 import React from 'react';
+import Img from "gatsby-image";
 
-import { Main, Image, Title, Excerpt } from "./style.css.js";
+import { Main, Title, Image, Excerpt } from "./style.css.js";
 
-const Post = ({ path, title, excerpt, date }) => {
+const Post = ({ path, title, excerpt, feature, date }) => {
+  console.log(feature);
   return (
     <Main exact to={ path }>
-      <Image src='http://via.placeholder.com/350x150'  />
+      <Img sizes={ feature } />
       <Title>{ title }</Title>
       <Excerpt>{ excerpt }</Excerpt>
     </Main>

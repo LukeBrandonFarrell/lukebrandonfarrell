@@ -6,8 +6,5 @@ excerpt: >-
   Dynamic website made for casting agency Talent Status using Laravel.
 feature: "./feature.jpg"
 author: Luke Brandon Farrell
-tags:
-  - z
-type: project
-external: https://talentstatus.com/
+tags: project, laravel
 ---

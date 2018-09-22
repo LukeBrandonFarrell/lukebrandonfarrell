@@ -4,8 +4,6 @@ module.exports = {
     tagline: 'ENTREPRENEURIAL, UX-ING, FULL-STACK WIZARD…',
     pages: {
       home: '/',
-      projects: '/projects',
-      experience: '/experience',
     },
   },
   plugins: [

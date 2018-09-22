@@ -1,18 +1,17 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import NavigationBar from '../components/navigation-bar'
+import Thumbnail from "../components/thumbnail";
 import Footer from '../components/footer'
+import thumbnailImage from '../assets/thumbnail.jpg';
 
 import '../vendor/css/fontawesome-all.min.css'
 import './index.css'
-
-require("prismjs/themes/prism-tomorrow.css");
+import "prismjs/themes/prism-tomorrow.css";
 
 class Layout extends React.Component {
   render(){
-    const { children, data } = this.props;
+    const { children } = this.props;
 
     return (
       <div>
@@ -23,16 +22,13 @@ class Layout extends React.Component {
           ]}
         />
 
-        <NavigationBar pages={data.site.siteMetadata.pages} />
+        <Thumbnail source={thumbnailImage} />
+
         { children() }
         <Footer />
       </div>
     );
   }
-};
-
-Layout.propTypes = {
-  children: PropTypes.func,
 }
 
 export default Layout
@@ -45,8 +41,6 @@ export const query = graphql`
         tagline
         pages {
           home
-          projects
-          experience
         }
       }
     }

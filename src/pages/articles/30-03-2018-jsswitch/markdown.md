@@ -5,15 +5,10 @@ title: A replacement for switch statements in Javascript
 excerpt: >-
   Switch statements are pretty ugly... here is an alternative to provide
   switch-like functionality using object literals.
-feature: "./feature.jpg"
+feature: "./feature.png"
 author: Luke Brandon Farrell
-tags:
-  - z
-type: article
-external: null  
+tags: project, javascript
 ---
-
-This is the one!
 
 In Javascript, one can replace a switch statement using object literal lookups like so:
 
@@ -45,5 +40,4 @@ switch (index) {
 
 Much more readable, don’t you think?
 
-
-<small>Feature Photo by [Hannah Troupe](https://unsplash.com/@htroupe) on Unsplash.</small>
+<small>Feature Photo by [undraw.co](https://undraw.co)</small>

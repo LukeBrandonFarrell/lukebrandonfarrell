@@ -1,12 +1,15 @@
 .container {
   display: inline-block;
-  width: 32%;
+  width: 25%;
   padding: 15px;
   vertical-align: top;
   text-decoration: none;
 
   &:hover {
     * { color: #9E170B; }
+    .tag {
+      color: #2F2F2F;
+    }
   }
 
   @media (max-width: 1350px) {
@@ -42,8 +45,8 @@
 }
 
 .title {
-  margin-bottom: 12px;
-  font-size: 26px;
+  margin-bottom: 6px;
+  font-size: 20px;
   font-weight: 600;
   color: #2F2F2F;
 }
@@ -51,6 +54,25 @@
 .excerpt {
   margin-bottom: 0px;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 100;
   color: #292929;
+}
+
+.tags {
+  margin-top: 6px;
+}
+
+.tag {
+  padding: 5px 20px;
+  color: #2F2F2F;
+  background-color: #d8b782;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 15px;
+  display: inline-block;
+  margin-right: 5px;
+
+  //&:hover {
+  //  background-color: #cdc2f1;
+  //}
 }

@@ -11,6 +11,8 @@ const Footer = () => {
         <a className={[ styles.icon, 'fab fa-github' ].join(' ')} href="https://github.com/LukeBrandonFarrell" target="_blank" />
         <a className={[ styles.icon, 'fab fa-linkedin' ].join(' ')} href="https://www.linkedin.com/in/lukebrandonfarrell/" target="_blank" />
         <a className={[ styles.icon, 'fab fa-stack-overflow' ].join(' ')} href="https://stackoverflow.com/story/lukebrandonfarrell" target="_blank" />
+        <a className={[ styles.icon, 'fab fa-twitter' ].join(' ')} href="https://twitter.com/therealmrcode" target="_blank" />
+        <a className={[ styles.icon, 'fab fa-medium' ].join(' ')} href="https://medium.com/@lukebrandonfarrell" target="_blank" />
       </div>
     </div>
   );

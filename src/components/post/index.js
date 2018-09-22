@@ -1,34 +1,31 @@
 import React from 'react';
-import Img from "gatsby-image";
-import GatsbyLink from 'gatsby-link'
 
 import styles from './style.module.scss';
 
-const Post = ({ path, title, excerpt, feature, date, external }) => {
-  const content = (
-    <div className={ styles.container }>
-      <div className={ styles.imageContainer }>
-        <img className={ styles.featuredImage } src={ feature.childImageSharp.sizes.src } />
-      </div>
+const Post = ({path, title, excerpt, feature, date, tags}) => {
+    const tagsJsx = tags.split(",").map(tag => {
+       return <div className={styles.tag}>{ tag }</div>;
+    });
 
-      <h1 className={ styles.title }>{ title }</h1>
-      <p className={ styles.excerpt }>{ excerpt }</p>
-    </div>
-  );
+    const content = (
+        <div className={styles.container}>
+            <div className={styles.imageContainer}>
+                <img className={styles.featuredImage} src={feature.childImageSharp.sizes.src}/>
+            </div>
 
-  if (!external) {
-    return (
-      <GatsbyLink exact to={ path }>
-        { content }
-      </GatsbyLink>
+            <h1 className={styles.title}>{title}</h1>
+            <p className={styles.excerpt}>{excerpt}</p>
+            <div className={styles.tags}>
+             { tagsJsx }
+            </div>
+        </div>
     );
-  }
 
-  return (
-    <a href={ external } target='_blank'>
-      { content }
-    </a>
-  );
+    return (
+        <a href={path}>
+            {content}
+        </a>
+    );
 };
 
 export default Post;

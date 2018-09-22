@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
 import PostList from '../components/post-list'
@@ -11,7 +10,7 @@ export default function Index({
 
   return (
     <div>
-      <Helmet title='Luke Brandon Farrell : Posts' />
+      <Helmet title='Luke Brandon Farrell' />
       <PostList posts={posts} />
     </div>
   );
@@ -21,7 +20,6 @@ export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { type: { eq: "article" } } }
     ) {
       edges {
         node {
@@ -39,7 +37,8 @@ export const pageQuery = graphql`
                 }
               }
             }
-            external
+            tags
+            author
           }
         }
       }

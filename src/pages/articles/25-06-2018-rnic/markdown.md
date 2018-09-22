@@ -6,8 +6,5 @@ excerpt: >-
   A pure JavaScript image collage component for React Native available free under the MIT license.
 feature: "./feature.png"
 author: Luke Brandon Farrell
-tags:
-  - z
-type: experience
-external: https://github.com/lukebrandonfarrell/react-native-images-collage  
+tags: article, javascript
 ---

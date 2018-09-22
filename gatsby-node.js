@@ -27,7 +27,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
                 }
               }
             }
-            external
+            tags
             author
           }
         }

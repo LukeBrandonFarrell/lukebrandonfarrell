@@ -15,7 +15,7 @@ const PostList = ({ posts }) => {
               excerpt={post.frontmatter.excerpt}
               feature={post.frontmatter.feature}
               date={post.frontmatter.date}
-              external={post.frontmatter.external} />
+              tags={post.frontmatter.tags} />
           );
        })}
     </div>

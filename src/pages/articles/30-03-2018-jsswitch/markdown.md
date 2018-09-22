@@ -7,7 +7,7 @@ excerpt: >-
   switch-like functionality using object literals.
 feature: "./feature.png"
 author: Luke Brandon Farrell
-tags: project, javascript
+tags: article, javascript
 ---
 
 In Javascript, one can replace a switch statement using object literal lookups like so:
